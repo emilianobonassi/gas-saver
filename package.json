@@ -1,0 +1,12 @@
+{
+  "name": "@emilianobonassi/gas-saver",
+  "version": "1.0.0",
+  "description": "Gas Saver is a collection of smart contracts to save gas on Ethereum",
+  "license": "MIT",
+  "files": [
+    "**/*.sol"
+  ],
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.0"
+  }
+}
