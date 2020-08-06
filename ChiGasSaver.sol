@@ -1,16 +1,10 @@
 pragma solidity ^0.5.0;
 
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-contract IFreeFromUpTo is IERC20 {
+contract IFreeFromUpTo {
     function freeFromUpTo(address from, uint256 value) external returns(uint256 freed);
 }
 
-
 contract ChiGasSaver {
-
-    using SafeMath for uint256;
 
     modifier saveGas(address payable sponsor) {
         uint256 gasStart = gasleft();
