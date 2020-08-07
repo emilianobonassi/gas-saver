@@ -6,7 +6,8 @@
 
 It defines a modifier that you can use to wrap the methods where you want to save gas burning gas tokens.
 
-It uses [Chi Gas tokens](https://medium.com/@1inch.exchange/everything-you-wanted-to-know-about-chi-gastoken-a1ba0ea55bf3)
+It uses [Chi Gas tokens](https://medium.com/@1inch.exchange/everything-you-wanted-to-know-about-chi-gastoken-a1ba0ea55bf3) or
+[GST2 Gas Tokens](https://gastoken.io/)
 
 ## Usage
 
@@ -14,12 +15,32 @@ Simply add the modifier to the methods you want, specifying the `sponsor` that w
 
 You have to approve your contract to spend Gas tokens on sponsor behalf (i.e. call `approve`)
 
-Below an example
+Below an example with CHI tokens
 
 ```
 import "@emilianobonassi/gas-saver/ChiGasSaver.sol";
 
 contract MyContract is ChiGasSaver {
+
+...
+
+function myExpensiveMethod()
+    external
+    saveGas(msg.sender)
+    returns (bool) {
+        ...
+    }
+...
+
+}
+```
+
+Below an example with GST2 tokens
+
+```
+import "@emilianobonassi/gas-saver/ChiGasSaver.sol";
+
+contract MyContract is GST2GasSaver {
 
 ...
 
