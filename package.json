@@ -1,6 +1,6 @@
 {
   "name": "@emilianobonassi/gas-saver",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Gas Saver is a collection of smart contracts to save gas on Ethereum",
   "license": "MIT",
   "files": [
